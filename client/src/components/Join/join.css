@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-h1 {
+.joinHeading {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
@@ -26,35 +26,35 @@ h1 {
 }
 
 .joinOuterContainer1 {
-    background-image: url('../images/splash1.jpg');
+    background-image: url('../../images/splash1.jpg');
 }
 
 .joinOuterContainer2 {
-    background-image: url('../images/splash2.jpg');
+    background-image: url('../../images/splash2.jpg');
 }
 
 .joinOuterContainer3 {
-    background-image: url('../images/splash3.jpg');
+    background-image: url('../../images/splash3.jpg');
 }
 
 .joinOuterContainer4 {
-    background-image: url('../images/splash4.jpg');
+    background-image: url('../../images/splash4.jpg');
 }
 
 .joinOuterContainer5 {
-    background-image: url('../images/splash5.jpg');
+    background-image: url('../../images/splash5.jpg');
 }
 
 .joinOuterContainer6 {
-    background-image: url('../images/splash6.jpg');
+    background-image: url('../../images/splash6.jpg');
 }
 
 .joinOuterContainer7 {
-    background-image: url('../images/splash7.jpg');
+    background-image: url('../../images/splash7.jpg');
 }
 
 .joinOuterContainer8 {
-    background-image: url('../images/splash8.jpg');
+    background-image: url('../../images/splash8.jpg');
 }
 
 .joinTint {
