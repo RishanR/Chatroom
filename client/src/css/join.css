@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+h1 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(26, 26, 29, 1);
+    margin: 0;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+.joinOuter{
+    width: 100%;
+    height: 100%;  
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 0;
+	background-repeat:no-repeat;
+	background-position: center center;
+    background-size: cover;
+}
+
+.joinOuterContainer1 {
+    background-image: url('../images/splash1.jpg');
+}
+
+.joinOuterContainer2 {
+    background-image: url('../images/splash2.jpg');
+}
+
+.joinOuterContainer3 {
+    background-image: url('../images/splash3.jpg');
+}
+
+.joinOuterContainer4 {
+    background-image: url('../images/splash4.jpg');
+}
+
+.joinOuterContainer5 {
+    background-image: url('../images/splash5.jpg');
+}
+
+.joinOuterContainer6 {
+    background-image: url('../images/splash6.jpg');
+}
+
+.joinOuterContainer7 {
+    background-image: url('../images/splash7.jpg');
+}
+
+.joinOuterContainer8 {
+    background-image: url('../images/splash8.jpg');
+}
+
+.joinTint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 34, 50, 0.85);
+}
+
+.joinInnerContainer{
+    width: 600px;
+    height: 600px;
+    background-color: #212121;
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: 3px 3px 50px 2px #1A1A1D;
+}
+
+.inputName, .inputRoom{
+    width: 55%;
+    height: 40px;
+    font-family: FontAwesome, Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+}
+
+.inputName{
+    margin: 100px 0px 0px;
+}
+
+.inputRoom{
+    margin: 30px 0px 50px;
+}
+
+.joinButton{
+    width: 55%;
+    height: 50px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color:#C3073F;
+    border: none;
+
+}
+
+.joinButton:hover{
+    background-color: #6F2232;
+    cursor: pointer;
+}
