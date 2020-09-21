@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.infoBar {
+    display: flex;
+    background-color:rgba(26, 26, 29, 1);
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 15px;
+}
+.infoRoom{
+    display: flex;
+    align-items: center;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+}
+
+.infoOnlineIcon, .infoCloseIcon {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.infoOnlineIcon{
+    background-image: url('../../images/onlineIcon.png');
+    margin-right: 15px;
+}
+
+.infoCloseIcon{
+    background-image: url('../../images/cancelDefault.png');
+}
+
+.infoCloseIcon:hover{
+    background-image: url('../../images/cancelHover.png');
+}
