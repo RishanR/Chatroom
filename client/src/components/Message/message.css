@@ -1,0 +1,54 @@
+.messageContainer{
+    display:flex;
+    align-items: center;
+}
+
+.justifyStart{
+    justify-content: flex-start;
+}
+
+.justifyEnd{
+    justify-content: flex-end;
+}
+
+.messageBoxIncoming, .messageBoxOutgoing {
+    padding: 15px;
+    margin: 8px;
+    border-radius: 18px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.messageBoxIncoming{
+    background-color: #4e4e50;
+}
+
+.messageBoxOutgoing{
+    background-color: #C3073F;
+}
+
+
+.sentText, .messageText {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.sentText{
+    color: #a7a7a7;
+}
+
+.messageText{
+    color: white;
+    
+}

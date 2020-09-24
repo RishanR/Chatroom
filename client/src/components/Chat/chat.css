@@ -1,4 +1,57 @@
 .chatOuterContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: #212121;
 }
+
+.infoBar {
+    flex: 1;
+}
+
+.chatContainer { 
+    display: flex;
+    flex-direction: row;
+    flex: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.chatMessageContainer{
+    flex: 6;
+}
+.usersCardClosed{
+    flex: 0 0;
+    flex-basis: 0px;
+    width: 0px;
+    background-color: rgba(26, 26, 29, 1);
+    transition: flex-basis 500ms ease-in, width 500ms ease-in;
+}
+
+.usersCardOpened{
+  flex: 0 0;
+  flex-basis: 200px;
+  width: 200px;
+  background-color: rgba(26, 26, 29, 1);
+  transition: flex-basis 500ms ease-out, width 500ms ease-out;
+}
+
+.inputNew {
+    flex: 0.7;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4e4e50;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #454547;
+  }

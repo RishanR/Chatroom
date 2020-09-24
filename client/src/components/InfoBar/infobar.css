@@ -9,7 +9,7 @@
     background-color:rgba(26, 26, 29, 1);
     align-items: center;
     justify-content: space-between;
-    padding: 15px 15px 15px;
+    padding: 0px 15px 0px;
 }
 .infoRoom{
     display: flex;
@@ -18,6 +18,34 @@
     font-weight: bold;
     color: white;
     font-size: 25px;
+}
+
+.infoUsersDefault, .infoUsersRed {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 25px;
+}
+
+.infoUsersDefault{
+    background-image: url('../../images/userDefault.png');
+}
+
+.infoUsersRed{
+    background-image: url('../../images/userHover.png');
+}
+
+.infoUsersDefault:hover, .infoUsersRed:hover {
+    cursor: pointer;
+}
+
+.infoUsersDefault:hover {
+    background-image: url('../../images/userHover.png');
+}
+
+.infoClose {
+    display: flex;
 }
 
 .infoOnlineIcon, .infoCloseIcon {

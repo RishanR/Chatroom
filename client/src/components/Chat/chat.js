@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 import './chat.css';
 
-import InfoBar from '../InfoBar/infobar'
+import InfoBar from '../InfoBar/infobar';
+import Input from '../Input/input';
+import Messages from '../Messages/messages';
+import Users from '../Users/users'
 
 let socket;
 
@@ -13,6 +17,9 @@ const Chat = ({ location }) => {
     const [room, setRoom] = useState("");
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
+    const [usersRoom, setUsersRoom] = useState([]);
+    const [showUsers, setShowUsers] = useState(false);
+
     const ENDPOINT = "localhost:5000";
 
     useEffect(() => {
@@ -36,10 +43,14 @@ const Chat = ({ location }) => {
 
     useEffect(() => {
         socket.on('message', (message) => {
-            setMessages([...messages, message]);
+            setMessages(msgs=>[...msgs, message]);
 
         });
-    }, [messages]);
+
+        socket.on('roomData', (roomInfo) => {
+            setUsersRoom(roomInfo.users);
+        });
+    }, []);
 
     // function for sending messages
     const sendMessage = (event) => {
@@ -51,12 +62,30 @@ const Chat = ({ location }) => {
     }
 
     console.log(message, messages);
+    console.log(usersRoom);
 
     return(
         <div className="chatOuterContainer">
-            <InfoBar room={room}/>
+            <InfoBar className="infoBar" room={room} setShowUsers={setShowUsers} showUsers={showUsers}/>
             <div className="chatContainer">
-                <input value={message} onChange={event => setMessage(event.target.value)} onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}/>
+                <ScrollToBottom className="chatMessageContainer">
+                    <Messages messages={messages} name={name}/>
+                </ScrollToBottom>
+                
+                {!showUsers ? (
+                    <div className="usersCardClosed">
+                        <Users usersRoom={usersRoom}/>
+                    </div>
+                )
+                : (
+                    <div className="usersCardOpened">
+                        <Users usersRoom={usersRoom}/>
+                    </div>  
+                )}
+                
+            </div>
+            <div className="inputNew">
+                <Input  message={message} setMessage={setMessage} sendMessage={sendMessage}/>
             </div>
         </div>
     );
