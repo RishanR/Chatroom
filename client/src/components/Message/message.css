@@ -13,7 +13,8 @@
 
 .messageBoxIncoming, .messageBoxOutgoing {
     padding: 15px;
-    margin: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     border-radius: 18px;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -33,10 +34,12 @@
 
 .messageBoxIncoming{
     background-color: #4e4e50;
+    margin-left: 8px;
 }
 
 .messageBoxOutgoing{
     background-color: #C3073F;
+    margin-right: 8px;
 }
 
 
@@ -46,6 +49,7 @@
 }
 .sentText{
     color: #a7a7a7;
+    margin: 8px;
 }
 
 .messageText{
