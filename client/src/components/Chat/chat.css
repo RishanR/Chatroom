@@ -22,19 +22,17 @@
     flex: 6;
 }
 .usersCardClosed{
-    flex: 0 0;
-    flex-basis: 0px;
+    flex-shrink: 0;
     width: 0px;
     background-color: rgba(26, 26, 29, 1);
-    transition: flex-basis 500ms ease-in, width 500ms ease-in;
+    transition: width 500ms ease-in;
 }
 
 .usersCardOpened{
-  flex: 0 0;
-  flex-basis: 200px;
+  flex-shrink: 0;
   width: 200px;
   background-color: rgba(26, 26, 29, 1);
-  transition: flex-basis 500ms ease-out, width 500ms ease-out;
+  transition: width 500ms ease-out;
 }
 
 .inputNew {
